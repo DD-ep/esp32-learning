@@ -1,0 +1,15 @@
+int led_pin = 12; //设置引脚
+
+void setup() {
+  pinMode(led_pin, OUTPUT);//设置该引脚为输出模式
+  
+}
+
+void loop() {   //循环函数
+  digitalWrite(led_pin, HIGH);  // HIGH为拉高该引脚
+  delay(1000);//设置延时为1s
+  digitalWrite(led_pin, LOW);  //LOW为降低该引脚
+  delay(1000);
+  // put your main code here, to run repeatedly:
+
+}
