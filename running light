@@ -1,0 +1,25 @@
+int pin_list[5] = {13,12,14,27,26};//设置引脚
+int num = sizeof(pin_list)/sizeof(pin_list[0]);
+void setup() {
+  for(int i=0;i<5;i++){
+    pinMode(pin_list[i],OUTPUT);//设置每个引脚的模式
+
+  }
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  for (int i = 0;i<num;i++){
+    digitalWrite(pin_list[i],HIGH);
+    if (i>0){
+      digitalWrite(pin_list[i-1],LOW);
+      }else {
+      digitalWrite(pin_list[num-1],LOW);
+        }
+    delay(250);
+  }
+ 
+  // put your main code here, to run repeatedly:
+
+}
